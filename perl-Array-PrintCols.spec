@@ -11,7 +11,6 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Array/%{real_name}-%{vers
 Patch0:		%{name}-fix.patch
 BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Array::PrintCols, is a Perl 5 module which defines a subroutine to
