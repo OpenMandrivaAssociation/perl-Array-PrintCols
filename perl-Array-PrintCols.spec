@@ -1,32 +1,33 @@
-%define real_name Array-PrintCols
+%define module Array-PrintCols
 
-Summary:	Array::PrintCols - print or format array elements in vertically sorted columns
-Name:		perl-%{real_name}
+Name:		perl-%{module}
 Version:	2.1
-Release: %mkrel 3
+Release:    %mkrel 4
+Summary:	Print or format array elements in vertically sorted columns
 License:	GPL or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Array/%{real_name}-%{version}.tar.bz2
+URL:		http://search.cpan.org/dist/%{module}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Array/%{module}-%{version}.tar.bz2
 Patch0:		%{name}-fix.patch
-BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
-Array::PrintCols, is a Perl 5 module which defines a subroutine to
+Array::PrintCols is a Perl 5 module which defines a subroutine to
 print arrays of elements in alphabetically, vertically sorted
 columns.  Optional arguments can be given to control either the
 width or number of the columns, the total width of the output, and
 the amount of indentation.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{module}-%{version} 
 %patch0 -p1
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
+
+%check
 make test
 
 %install
@@ -39,8 +40,5 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc README
-%{perl_vendorlib}/Array/PrintCols.pm
+%{perl_vendorlib}/Array
 %{_mandir}/*/*
-
-
-
