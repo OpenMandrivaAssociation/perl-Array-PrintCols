@@ -3,7 +3,7 @@
 Summary:	Array::PrintCols - print or format array elements in vertically sorted columns
 Name:		perl-%{real_name}
 Version:	2.1
-Release: %mkrel 2
+Release: %mkrel 3
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
