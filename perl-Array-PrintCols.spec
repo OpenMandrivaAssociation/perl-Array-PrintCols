@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	2.1
-Release:    %mkrel 6
+Release:    %mkrel 7
 Summary:	Print or format array elements in vertically sorted columns
 License:	GPL or Artistic
 Group:		Development/Perl
