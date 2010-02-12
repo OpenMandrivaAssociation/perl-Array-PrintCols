@@ -1,16 +1,19 @@
-%define module Array-PrintCols
+%define upstream_name    Array-PrintCols
+%define upstream_version 2.1
 
-Name:		perl-%{module}
-Version:	2.1
-Release:    %mkrel 7
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Print or format array elements in vertically sorted columns
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Array/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Array/%{upstream_name}-%{upstream_version}.tar.bz2
 Patch0:		%{name}-fix.patch
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Array::PrintCols is a Perl 5 module which defines a subroutine to
@@ -20,7 +23,7 @@ width or number of the columns, the total width of the output, and
 the amount of indentation.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 %patch0 -p1
 
 %build
@@ -28,7 +31,7 @@ the amount of indentation.
 %make
 
 %check
-make test
+%make test
 
 %install
 rm -rf %{buildroot}
