@@ -1,15 +1,15 @@
 %define upstream_name    Array-PrintCols
-%define upstream_version 2.1
+%define upstream_version 2.5
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%perl_convert_version 2.5
+Release:	1
 
 Summary:	Print or format array elements in vertically sorted columns
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Array/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Array/Array-PrintCols-2.5.tar.gz
 Patch0:		%{name}-fix.patch
 
 BuildRequires:	perl-devel
@@ -85,4 +85,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Fri Jul 15 2005 Oden Eriksson <oeriksson@mandriva.com> 2.1-1mdk
 - initial Mandriva package 
 - adde P0 from PLD
+
 
