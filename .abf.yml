@@ -1,4 +1,5 @@
 removed_sources:
   Array-PrintCols-2.1.tar.bz2: 60f14353527f5e4072b96a28218df48102bda077
-sources:
   Array-PrintCols-2.5.tar.gz: f9c97ca0ddde5393bfe91fff440596e283f8359b
+sources:
+  Array-PrintCols-2.6.tar.gz: f19b93c0af48cd125d2ac1c9e952d0bc18938b8b
