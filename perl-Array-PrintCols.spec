@@ -8,7 +8,7 @@ Release:	3
 Summary:	Print or format array elements in vertically sorted columns
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Array/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
