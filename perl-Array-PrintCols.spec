@@ -2,14 +2,14 @@
 %define upstream_version 2.6
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	Print or format array elements in vertically sorted columns
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Array/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Array-PrintCols
+Source0:	https://cpan.metacpan.org/authors/id/A/AK/AKSTE/Array-PrintCols-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
