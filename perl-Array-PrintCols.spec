@@ -1,15 +1,13 @@
 %define upstream_name    Array-PrintCols
-%define upstream_version 2.6
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	2.6
+Release:	5
 
 Summary:	Print or format array elements in vertically sorted columns
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Array-PrintCols
-Source0:	https://cpan.metacpan.org/authors/id/A/AK/AKSTE/Array-PrintCols-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AK/AKSTE/Array-PrintCols-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ width or number of the columns, the total width of the output, and
 the amount of indentation.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
